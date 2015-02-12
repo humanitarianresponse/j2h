@@ -19,7 +19,7 @@ function j2h_menu() {
         'title' => 'Json 2 Human',
         'description' => t('Json 2 Human Settings'),
         'page callback' => 'drupal_get_form',
-        'page arguments' => array('j2h_configuration'),
+        'page arguments' => array('j2h_configuracion'),
         'access arguments' => array('administer site configuration'),
         'file' => 'j2h.admin.inc',
     );
@@ -131,6 +131,9 @@ function j2h_block_info() {
   $blocks['j2h'] = array(
     'info' => 'Json 2 Human Block',
   );
+  $blocks['j2h_4w'] = array(
+    'info' => 'Json 2 Human Block 4w',
+  );
   return $blocks;
 }
 /**
@@ -140,6 +143,9 @@ function j2h_block_view($delta = '') {
   switch ($delta) {
     case 'j2h':
       $block['content'] = j2h();
+      return $block;
+    case 'j2h_4w':
+      $block['content'] = j2h('4w');
       return $block;
   }
   break;
