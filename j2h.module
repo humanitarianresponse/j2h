@@ -131,7 +131,7 @@ function j2h_block_info() {
   $blocks['j2h'] = array(
     'info' => 'Json 2 Human Block'
   );
-  $blocks['j2h_4w'] = array(
+  $blocks['j2h_4w'] = array(
     'info' => 'Json 2 Human Block 4w'
   );
   return $blocks;
